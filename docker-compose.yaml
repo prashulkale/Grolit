@@ -1,0 +1,35 @@
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: alfalaval
+    ports:
+      - "5432:5432"
+    networks:
+      - valu-network
+    volumes:
+      - valu-data:/var/lib/postgresql/data
+
+
+  redis:
+    image: redis:latest  # Use the official Redis image
+    container_name: valuredis
+    ports:
+      - "6379:6379"  # Expose Redis port to the host
+    volumes:
+      - valu-data:/data  # Persist Redis data
+    restart: always  # Automatically restart Redis if it stops
+
+
+
+
+networks:
+  valu-network:
+  
+
+volumes:
+  valu-data:
+  
