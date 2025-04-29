@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { z } from "zod";
+// import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import {
+import { 
   Form,
   FormControl,
   FormField,
@@ -132,9 +133,9 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="animate-slide-right" style={{ animationDelay: "0.4s" }}>
-            <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+        <div className="  flex items-center justify-center gap-12">
+          <div className="animate-slide-right lg:flex w-full justify-around" style={{ animationDelay: "0.4s" }}>
+            <h2 className="text-5xl gradient-heading  font-bold mb-6">Send Us a Message</h2>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -240,25 +241,13 @@ export default function ContactPage() {
                   )}
                 />
 
-                <Button type="submit" disabled={isSubmitting} className="w-full md:w-auto">
+                <Button type="submit" disabled={isSubmitting} className="w-full  bg-orange-500 md:w-auto">
                   {isSubmitting ? "Sending..." : "Submit Message"}
                 </Button>
               </form>
             </Form>
           </div>
 
-          <div className="h-[500px] lg:h-auto rounded-lg overflow-hidden animate-slide-right" style={{ animationDelay: "0.5s" }}>
-            {/* In a production app, you would integrate a real map here */}
-            <div className="w-full h-full bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center p-6">
-                <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Interactive Map</h3>
-                <p className="text-muted-foreground">
-                  An interactive map would be displayed here showing the location of the Kelvion headquarters.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

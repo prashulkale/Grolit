@@ -4,7 +4,7 @@ import { RecentInquiries } from "@/components/dashboard/recent-inquiries";
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+// import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import prismadb from "@/lib/db";
 
 export default async function DashboardPage() {

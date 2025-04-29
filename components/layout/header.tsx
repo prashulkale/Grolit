@@ -31,108 +31,63 @@ const mainNav = [
     children: [
       {
         title: "Heat Exchangers",
-        href: "/products/heat-exchangers",
+        href: "/products",
         description: "Efficient heat exchange solutions for various industrial applications",
       },
       {
-        title: "Air Heat Exchangers",
-        href: "/products/air-heat-exchangers",
+        title: "Gasketed Plate Heat Exchangers",
+        href: "/products/gasketedPlateHeatExchangers",
         description: "Advanced air cooling and heating systems for commercial use",
       },
-      {
-        title: "Refrigeration",
-        href: "/products/refrigeration",
-        description: "Industrial refrigeration components and systems",
-      },
-      {
-        title: "System Solutions",
-        href: "/products/system-solutions",
-        description: "Complete turnkey system solutions for thermal management",
-      },
+     
     ],
   },
-  {
-    title: "Industries",
-    href: "/industries",
-    children: [
-      {
-        title: "Energy",
-        href: "/industries/energy",
-        description: "Specialized solutions for power generation and energy applications",
-      },
-      {
-        title: "Food & Beverage",
-        href: "/industries/food-beverage",
-        description: "Heat exchange technology for food processing applications",
-      },
-      {
-        title: "HVAC",
-        href: "/industries/hvac",
-        description: "Heating, ventilation, and air conditioning applications",
-      },
-      {
-        title: "Chemical",
-        href: "/industries/chemical",
-        description: "Heat exchangers designed for chemical and pharmaceutical processes",
-      },
-      {
-        title: "Marine",
-        href: "/industries/marine",
-        description: "Maritime heat exchange solutions for vessels and offshore platforms",
-      },
-    ],
-  },
+  
   {
     title: "Services & Support",
     href: "/services",
     children: [
-      {
-        title: "Maintenance",
-        href: "/services/maintenance",
-        description: "Preventive and corrective maintenance services for all products",
-      },
+     
       {
         title: "Spare Parts",
         href: "/services/spare-parts",
         description: "Original spare parts for all Kelvion heat exchangers",
       },
-      {
-        title: "Technical Support",
-        href: "/services/technical-support",
-        description: "Expert assistance for installation and troubleshooting",
-      },
-      {
-        title: "Training",
-        href: "/services/training",
-        description: "Comprehensive training programs for operation and maintenance",
-      },
+      
+     
     ],
   },
+  // {
+  //   title: "About",
+  //   href: "/about",
+  //   children: [
+  //     {
+  //       title: "Company",
+  //       href: "/about/company",
+  //       description: "Learn about our history, mission, and values",
+  //     },
+  //     {
+  //       title: "Sustainability",
+  //       href: "/about/sustainability",
+  //       description: "Our commitment to environmental responsibility",
+  //     },
+  //     {
+  //       title: "Careers",
+  //       href: "/about/careers",
+  //       description: "Join our team and explore job opportunities",
+  //     },
+  //     {
+  //       title: "News",
+  //       href: "/about/news",
+  //       description: "Latest updates and press releases",
+  //     },
+  //   ],
+  // },
+
   {
-    title: "About",
-    href: "/about",
-    children: [
-      {
-        title: "Company",
-        href: "/about/company",
-        description: "Learn about our history, mission, and values",
-      },
-      {
-        title: "Sustainability",
-        href: "/about/sustainability",
-        description: "Our commitment to environmental responsibility",
-      },
-      {
-        title: "Careers",
-        href: "/about/careers",
-        description: "Join our team and explore job opportunities",
-      },
-      {
-        title: "News",
-        href: "/about/news",
-        description: "Latest updates and press releases",
-      },
-    ],
+    title: "Industries",
+    href: "/industries",
+   
   },
   {
     title: "Contact",
@@ -166,6 +121,7 @@ export default function Header() {
       <div className="container-fluid">
         <div className="flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-6 md:gap-10">
+
             <Link href="/" className="font-bold text-2xl text-primary">
               Kelvion
             </Link>
@@ -221,18 +177,12 @@ export default function Header() {
           </div>
           
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" aria-label="Search">
+            {/* <Button variant="ghost" size="icon" aria-label="Search">
               <Search className="h-5 w-5" />
-            </Button>
+            </Button> */}
             <ThemeToggle />
             
-            {session ? (
-              <UserNav user={session.user} />
-            ) : (
-              <Link href="/auth/signin">
-                <Button variant="ghost">Sign In</Button>
-              </Link>
-            )}
+           
             
             <Sheet>
               <SheetTrigger asChild>
@@ -283,16 +233,7 @@ export default function Header() {
                     ))}
                   </nav>
                   
-                  {!session && (
-                    <div className="grid gap-2">
-                      <Link href="/auth/login">
-                        <Button className="w-full">Sign In</Button>
-                      </Link>
-                      <Link href="/auth/register">
-                        <Button variant="outline" className="w-full">Register</Button>
-                      </Link>
-                    </div>
-                  )}
+                
                 </div>
               </SheetContent>
             </Sheet>
@@ -302,3 +243,28 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

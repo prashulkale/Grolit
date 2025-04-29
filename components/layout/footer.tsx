@@ -41,22 +41,22 @@ export default function Footer() {
             <h5 className="font-semibold text-base mb-4">Products</h5>
             <ul className="space-y-2">
               <li>
-                <Link href="/products/heat-exchangers" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/products/" className="text-muted-foreground hover:text-primary transition-colors">
                   Heat Exchangers
                 </Link>
               </li>
               <li>
-                <Link href="/products/air-heat-exchangers" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/products/" className="text-muted-foreground hover:text-primary transition-colors">
                   Air Heat Exchangers
                 </Link>
               </li>
               <li>
-                <Link href="/products/refrigeration" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/products/" className="text-muted-foreground hover:text-primary transition-colors">
                   Refrigeration
                 </Link>
               </li>
               <li>
-                <Link href="/products/system-solutions" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/products/" className="text-muted-foreground hover:text-primary transition-colors">
                   System Solutions
                 </Link>
               </li>
@@ -67,27 +67,27 @@ export default function Footer() {
             <h5 className="font-semibold text-base mb-4">Industries</h5>
             <ul className="space-y-2">
               <li>
-                <Link href="/industries/energy" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
                   Energy
                 </Link>
               </li>
               <li>
-                <Link href="/industries/food-beverage" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
                   Food & Beverage
                 </Link>
               </li>
               <li>
-                <Link href="/industries/hvac" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
                   HVAC
                 </Link>
               </li>
               <li>
-                <Link href="/industries/chemical" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
                   Chemical
                 </Link>
               </li>
               <li>
-                <Link href="/industries/marine" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/industries" className="text-muted-foreground hover:text-primary transition-colors">
                   Marine
                 </Link>
               </li>
@@ -119,16 +119,16 @@ export default function Footer() {
             © {new Date().getFullYear()} Kelvion. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
             </Link>
-            <Link href="/cookie-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Cookie Policy
             </Link>
-            <Link href="/sitemap" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Sitemap
             </Link>
           </div>

@@ -4,6 +4,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, ChevronRight, Building2, Droplet, Factory, Atom as Atoms } from "lucide-react";
+// import HomeProductCard from "@/components/HomeProductCard";
+import ProductsCard from "@/components/HomeProductCard";
+import Industry from "@/components/Industry";
+
+
+
+export const companyInfo = {
+  name: "GROWLIT ENTERPRISES",
+  description: "Authorized distributor of ALFACHILL TECHNOLOGY and provider of comprehensive cooling solutions",
+  services: [
+    "Commercial & Industrial Chillers",
+    "Plate Heat Exchangers",
+    "Spare Parts and Services",
+    "Oil Filtration Equipment"
+  ],
+  strengths: [
+    "Commitment to continuous improvement",
+    "Smart design and implementation",
+    "Complete solutions for heating & cooling applications",
+    "World-class product offerings"
+  ],
+  website: "www.growlitenterprises.com"
+};
 
 export default function Home() {
   return (
@@ -13,7 +36,7 @@ export default function Home() {
         <div className="container-fluid">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
-              <h1 className="gradient-heading mb-6">
+              <h1 className="gradient-heading mb-6 py-3">
                 Innovative Heat Exchange Solutions
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl">
@@ -21,17 +44,17 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                  Explore Solutions
+                 <Link href={"/products"}> Explore Solutions </Link> 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                  Contact Us
+                <Button size="lg" variant="outline" className="  bg-orange-500 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                 <Link href={"/contact"}>   Contact Us </Link> 
                 </Button>
               </div>
             </div>
             <div className="relative flex justify-center">
               <Image 
-                src="https://images.pexels.com/photos/9325846/pexels-photo-9325846.jpeg" 
+                src="/t21_launch_product_still_640x360.webp" 
                 alt="Industrial heat exchanger" 
                 width={600} 
                 height={400} 
@@ -39,12 +62,12 @@ export default function Home() {
                 priority
               />
             </div>
-          </div>
+          </div>    
         </div>
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-16 bg-muted/50">
+      {/* <section className="py-16 bg-muted/50">
         <div className="container-fluid">
           <div className="text-center mb-12">
             <h2 className="mb-4">Industry Solutions</h2>
@@ -79,7 +102,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <Image 
-                    src="https://images.pexels.com/photos/2581269/pexels-photo-2581269.jpeg" 
+                    src="/Energy Industry Solutions.jpg" 
                     alt="Energy industry solution" 
                     width={600} 
                     height={400} 
@@ -252,108 +275,20 @@ export default function Home() {
             </TabsContent>
           </Tabs>
         </div>
-      </section>
+      </section> */}
+
+      <Industry/>
 
       {/* Featured Products */}
-      <section className="py-16">
-        <div className="container-fluid">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Featured Products</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Discover our most innovative heat exchange solutions designed for maximum efficiency and reliability.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-0">
-                <div className="h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src="https://images.pexels.com/photos/680987/pexels-photo-680987.jpeg"
-                    alt="Plate heat exchanger"
-                    width={400}
-                    height={200}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform"
-                  />
-                </div>
-                <CardTitle className="mt-4">Plate Heat Exchangers</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <p className="text-muted-foreground">
-                  High-efficiency plate heat exchangers with modular design for various industrial applications.
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
-                  View Details
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-0">
-                <div className="h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src="https://images.pexels.com/photos/175690/pexels-photo-175690.jpeg"
-                    alt="Shell and tube heat exchanger"
-                    width={400}
-                    height={200}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform"
-                  />
-                </div>
-                <CardTitle className="mt-4">Shell & Tube Exchangers</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <p className="text-muted-foreground">
-                  Robust shell and tube heat exchangers designed for high-pressure and high-temperature processes.
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
-                  View Details
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-0">
-                <div className="h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg"
-                    alt="Air fin cooler"
-                    width={400}
-                    height={200}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform"
-                  />
-                </div>
-                <CardTitle className="mt-4">Air Fin Coolers</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <p className="text-muted-foreground">
-                  Energy-efficient air fin coolers for process cooling applications with low maintenance requirements.
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button variant="ghost" className="text-primary hover:text-primary/80 p-0">
-                  View Details
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-          
-          <div className="flex justify-center mt-10">
-            <Link href="/products">
-              <Button size="lg">
-                View All Products
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+   
+
+      <ProductsCard/>
+
+
+
+  
+
+
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
@@ -369,7 +304,7 @@ export default function Home() {
                   Request a Consultation
                 </Button>
                 <Link href="/contact">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/20 hover:bg-primary-foreground/10">
+                  <Button size="lg" variant="outline" className="border-primary-foreground/20 bg-orange-500 hover:bg-primary-foreground/10">
                     Contact Sales
                   </Button>
                 </Link>
