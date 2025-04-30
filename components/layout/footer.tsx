@@ -11,12 +11,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="font-bold text-2xl text-primary mb-6 inline-block">
-              Kelvion
+               Growlit <span className="text-orange-500">Enterprises</span> 
             </Link>
             <p className="text-muted-foreground max-w-md mb-6">
-              Kelvion is one of the leading global manufacturers of heat exchangers
+               Growlit Enterprises is one of the leading global manufacturers of heat exchangers
               and has been providing solutions for almost every industrial application
-              since the 1920s.
+              since the 2015s.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" aria-label="Facebook">
@@ -116,7 +116,7 @@ export default function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Kelvion. All rights reserved.
+            © {new Date().getFullYear()} Growlit Enterprises. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
             <Link href="/#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

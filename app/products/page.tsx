@@ -27,6 +27,7 @@ const Products = () => {
   return (
     <div className=" px-5 min-h-screen">
       <HeroSection
+        customStyle='py-'
         title="Products & Solutions"
         subtitle="Cutting-edge technologies designed to optimize industrial processes and enhance operational efficiency."
         backgroundImage="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"

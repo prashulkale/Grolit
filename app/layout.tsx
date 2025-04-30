@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Kelvion - Heat Exchanger Solutions',
-    template: '%s | Kelvion'
+    default: 'Growlit Enterprises - Heat Exchanger Solutions',
+    template: '%s | Growlit Enterprises'
   },
   description: 'Global manufacturer of heat exchangers and related products',
 };

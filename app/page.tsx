@@ -32,11 +32,11 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden hero-pattern">
+      <section className="relative py-20 lg:py-24 overflow-hidden hero-pattern">
         <div className="container-fluid">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
-              <h1 className="gradient-heading mb-6 py-3">
+              <h1  className="gradient-heading   mb-6 py-3">
                 Innovative Heat Exchange Solutions
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl">

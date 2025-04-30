@@ -4,6 +4,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
+  customStyle?: string;
   title: string;
   subtitle: string;
   ctaText?: string;
@@ -14,6 +15,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
+  customStyle,
   title,
   subtitle,
   ctaText,
@@ -24,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <div 
-      className="relative bg-corporate-900 text-white py-24 md:py-32"
+      className={`relative bg-corporate-900 text-white py-24 ${customStyle}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
